@@ -1,18 +1,29 @@
-import React from 'react';
+import {StackNavigationProp} from '@react-navigation/stack';
+import React, {useState, useEffect} from 'react';
 import {View, Text, FlatList, TouchableOpacity, StatusBar} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {Lesson} from '../../@types/Lesson';
+import {RootStackParamList} from '../../@types/RootStackParamList';
+import lessonJson from '../../assets/lessons.json';
+import Bible from '../../components/Bible';
 
-function HomeScreen() {
-  const beliefs = [
-    {title: 'A Biblia'},
-    {title: 'A Trindade'},
-    {title: 'Deus Pai'},
-    {title: 'Deus Filho'},
-    {title: 'Deus Espirito Santo'},
-    {title: 'A Trindade'},
-    {title: 'A Biblia'},
-    {title: 'A Trindade'},
-  ];
+// interface ItemProps extends HymnProps {
+//   navigate?: (number: string, name: string) => void;
+// }
+
+type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
+
+interface HomeProps {
+  navigation: HomeScreenNavigationProp;
+}
+
+const HomeScreen: React.FC<HomeProps> = ({navigation}) => {
+  const [lessons, setLessons] = useState<Array<Lesson>>([]);
+
+  useEffect(() => {
+    setLessons(lessonJson);
+  }, [setLessons]);
+
   return (
     <>
       <StatusBar backgroundColor="#4755C9" barStyle="light-content" />
@@ -30,9 +41,12 @@ function HomeScreen() {
             marginTop: 30,
           }}>
           <Text style={{color: '#fff', fontSize: 22}}>
-            28 Crencas Adventistas
+            28 Crenças Adventistas
           </Text>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('About');
+            }}>
             <Icon name="info" color="#fff" size={25} />
           </TouchableOpacity>
         </View>
@@ -44,7 +58,7 @@ function HomeScreen() {
             margin: 15,
           }}>
           <Text style={{color: '#fff', fontSize: 16}}>
-            Entenda nossas crencas fundamentais
+            Entenda nossas crenças fundamentais
           </Text>
         </View>
         <View
@@ -62,8 +76,9 @@ function HomeScreen() {
             shadowRadius: 2,
           }}>
           <FlatList
-            data={beliefs}
+            data={lessons}
             style={{marginTop: 50}}
+            keyExtractor={item => String(item.id)}
             renderItem={({item}) => (
               <TouchableOpacity
                 style={{
@@ -75,8 +90,19 @@ function HomeScreen() {
                   marginHorizontal: 15,
                   marginBottom: 10,
                   borderRadius: 12,
-                }}>
-                <Text>{item.title}</Text>
+                }}
+                onPress={() => navigation.navigate('Lesson', {id: item.id})}>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'space-evenly',
+                  }}>
+                  <Bible />
+                  <Text style={{marginLeft: 10, fontSize: 16}}>
+                    {item.title}
+                  </Text>
+                </View>
                 <Icon name="keyboard-arrow-right" color="#4755C9" size={25} />
               </TouchableOpacity>
             )}
@@ -85,6 +111,6 @@ function HomeScreen() {
       </View>
     </>
   );
-}
+};
 
 export default HomeScreen;

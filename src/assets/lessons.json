@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "title": "As Escrituras Sagradas",
+    "verses": "II Pedro 1:20 e 21; II Tim. 3:16 e 17; Sal. 119:105; Prov. 30:5 e 6; Isa. 8:20; João 17:17; I Tess. 2:13; Heb. 4:12.",
+    "description":
+      "As Escrituras Sagradas, o Antigo e Novo Testamentos, são a Palavra de Deus escrita, dada por inspiração divina, através de santos homens de Deus que falaram e escreveram ao serem movidos pelo Espírito Santo. Nesta Palavra, Deus transmitiu ao homem o conhecimento necessário para a salvação. As Escrituras Sagradas são a infalível revelação de Sua vontade. Constituem o padrão do caráter, a prova da experiência, o autorizado revelador de doutrinas e o registro fidedigno dos atos de Deus na História."
+  },
+  {
+    "id": 2,
+    "title": "A Trindade",
+    "verses": "Deut. 6:4; Mat. 28:19; II Cor. 13:13; Efés. 4:4-6; I Pedro 1:2; I Tim. 1:17; Apoc. 14:7.",
+    "description":
+      "Há um só Deus: Pai, Filho e Espírito Santo, uma unidade de três Pessoas co-eternas. Deus é imortal, onipotente, onisciente, acima de tudo e sempre presente. Ele é infinito e está além da compreensão humana, mas é conhecido por meio de Sua auto-revelação. É para sempre digno de culto, adoração e serviço por parte de toda a criação."
+  },
+  {
+    "id": 3,
+    "title": "O Pai",
+    "verses": "Gên. 1:1; Apoc. 4:11; I Cor. 15:28; João 3:16; I João 4:8; I Tim. 1:17; Êxo. 34:6 e 7; João 14:9.",
+    "description":
+      "Deus, o Eterno Pai, é o Criador, o Originador, o Mantenedor e o Soberano de toda a criação. Ele é justo e santo, compassivo e clemente, tardio em irar-Se, e grande em constante amor e fidelidade. As qualidades e os poderes manifestados no Filho e no Espírito Santo também constituem revelações do Pai."
+  }
+
+]
