@@ -44,6 +44,7 @@ const HomeScreen: React.FC<HomeProps> = ({navigation}) => {
             28 Crenças Adventistas
           </Text>
           <TouchableOpacity
+            style={{padding: 10}}
             onPress={() => {
               navigation.navigate('About');
             }}>
@@ -77,7 +78,7 @@ const HomeScreen: React.FC<HomeProps> = ({navigation}) => {
           }}>
           <FlatList
             data={lessons}
-            style={{marginTop: 50}}
+            style={{marginTop: 50, marginBottom: 30}}
             keyExtractor={item => String(item.id)}
             renderItem={({item}) => (
               <TouchableOpacity

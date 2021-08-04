@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "168591767267",
+    "project_id": "crencasadventistas",
+    "storage_bucket": "crencasadventistas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168591767267:android:b6db02c68a02368e8937d6",
+        "android_client_info": {
+          "package_name": "com.crencasadventistas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168591767267-sptdtedu3r2rh1f5ktrusaifo0cbn8be.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEbE79tkfpJf9x5CYAV7yHV6h-e76X_v4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168591767267-sptdtedu3r2rh1f5ktrusaifo0cbn8be.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
