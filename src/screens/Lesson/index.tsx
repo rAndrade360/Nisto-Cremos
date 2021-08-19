@@ -1,7 +1,7 @@
 import {RouteProp} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import React, {useEffect, useState} from 'react';
-import {BannerAd, BannerAdSize} from '@react-native-firebase/admob';
+import {BannerAd, BannerAdSize, TestIds} from '@react-native-firebase/admob';
 import {
   ScrollView,
   Text,
@@ -128,7 +128,7 @@ const Lesson: React.FC<LessonsProps> = ({route, navigation}) => {
               </Text>
             </TouchableOpacity>
             <BannerAd
-              unitId="ca-app-pub-4375066778948659/9428640878"
+              unitId={TestIds.BANNER}
               size={BannerAdSize.SMART_BANNER}
             />
           </View>
